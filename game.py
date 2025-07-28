@@ -1,3 +1,4 @@
+import random
 def get_player_guess():
     while True:
         try:
