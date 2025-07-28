@@ -1,3 +1,15 @@
+import random
+def get_player_guess():
+    while True:
+        try:
+            guess = int(input("Guess a number: "))
+            if 1 <= guess <= 100:
+                return guess
+            else:
+                print("Please enter a number between 1 and 100.")
+        except ValueError:
+            print("Invalid input. Please enter a valid number.")
+
 def check_guess(secret_number, player_guess):
 
     if player_guess == secret_number:
@@ -34,3 +46,4 @@ if __name__ == "__main__":
     print(check_guess(50, 30))  # low
     print(check_guess(50, 70))  # high
     print(check_guess(50, 50))  # correct
+
